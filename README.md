@@ -31,4 +31,4 @@ This is my first arduino project, and it has served mostly as a learning experie
 
 ## How can we improve the project?
 
-* The way the sound effects are built implies that the movement of the objects stops while playing the sounds. 
+* The way the sound effects are built implies that the movement of the objects stops while playing the sounds. It would be interesting to fix this so the sounds do not slow down the natural flow of the game.
