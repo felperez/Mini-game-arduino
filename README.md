@@ -8,8 +8,7 @@ This is my first arduino project, and it has served mostly as a learning experie
 
 ## Video
 
-![Video_demonstration](http://img.youtube.com/vi/{o5h392pwCHI}/0.jpg)
-
+[![Video demonstration](https://img.youtube.com/vi/o5h392pwCHI/0.jpg)](https://www.youtube.com/watch?v=o5h392pwCHI "Arduino mini game")
 
 ## Components
 
