@@ -10,6 +10,8 @@ const int SW_pin = 2; // digital pin connected to switch output
 const int Y_pin = 0; // analog pin connected to X output
 const int X_pin = 1; // analog pin connected to Y output
 
+int buzzer = 13;//the pin of the active buzzer
+
 const int buttonPin = 4; //digital pin connected to button
 int buttonState = 0;
 
@@ -47,6 +49,9 @@ void setup() {
   
   Serial.begin(9600);
 
+  //initialize the buzzer pin as an output
+  pinMode(buzzer,OUTPUT);
+
   // set up the LCD's number of columns and rows:
   lcd.begin(16, 2);
   // Print a message to the LCD.
@@ -66,6 +71,8 @@ void loop() {
     (enemy[n] == 1 and x_enemy[n] + 1 == x_pos and y_enemy[n] == y_pos[0] and y_enemy[n] == y_pos[1])){
       lcd.setCursor(x_enemy[n], y_enemy[n]);
       lcd.print("X");
+      
+      crash_sound();
       
       delay(400);
       lcd.clear();
@@ -170,6 +177,17 @@ void loop() {
         bullet[n] = 1;
         x_bull[n] = x_pos + 1;
         y_bull[n] = y_pos[0];
+
+//        unsigned char i;
+//        for(i=0;i<20;i++)
+//        {
+//        digitalWrite(buzzer,HIGH);
+//        delay(1);//wait for 1ms
+//        digitalWrite(buzzer,LOW);
+//        delay(1);//wait for 1ms
+//        }
+
+        shooting_sound();
         
         break;  
       }
@@ -215,6 +233,14 @@ void loop() {
     lcd.setCursor(x_bon, y_bon);
     lcd.print("*");  
     t_bonus = t_bonus + 1;
+
+    if ((t_bonus % 6 == 0) or (t_bonus == 0)){
+      tone(buzzer, 1000, 100);
+    }
+
+    else if(t_bonus % 6 == 3){
+      tone(buzzer, 500, 100);
+    }
   }
 
   else {
@@ -274,4 +300,24 @@ byte bullet_char[8] = {
   B00000,
   B00000,
   B00000
+};
+
+
+// Sound functions
+
+void shooting_sound() {
+  for (int n = 2000 ; n > 100 ; --n){
+    if (n % 2 == 0){
+      tone(buzzer,n,2);
+    }  
+  }
+};
+
+
+// Crash sound 
+
+void crash_sound() {
+  for (int n = 0 ; n < 500 ; ++n){
+    tone(buzzer,random(100,2000),20);
+  }
 };
