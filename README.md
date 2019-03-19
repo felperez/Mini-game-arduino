@@ -12,7 +12,7 @@ This is my first arduino project, and it has served mostly as a learning experie
 
 ## Circuit board
 
-![Alt text](blob/master/Circuit.png?raw=true "Title")
+![Circuit_board](https://github.com/felperez/Mini-game-arduino/blob/master/Circuit.png)
 
 
 
