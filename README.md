@@ -8,18 +8,21 @@ This is my first arduino project, and it has served mostly as a learning experie
 
 ## Video
 
+![Video_demonstration](http://img.youtube.com/vi/{o5h392pwCHI}/0.jpg)
 
 
 ## Components
 
-* Arduino board (I used Mega 2560 but UNO works as well),
+* 1 Arduino board (I used Mega 2560 but UNO works as well),
 * 2-axis joystick
-* Button
-* Passive buzzer
-* 10kOhm resistor
+* 1 Button
+* 1 Passive buzzer
+* 10kΩ resistor
 * 16x2 LCD display
 * 10k potentiometer
+* 1 Breadboard
 * Several F-M and M-M wires
+
 
 ## Circuit board
 
@@ -27,3 +30,6 @@ This is my first arduino project, and it has served mostly as a learning experie
 
 
 
+## How can we improve the project?
+
+* The way the sound effects are built implies that the movement of the objects stops while playing the sounds. 
