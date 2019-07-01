@@ -57,7 +57,7 @@ void setup() {
   // Print a message to the LCD.
   lcd.print("Welcome to my");
   lcd.setCursor(0,1);
-  lcd.print("shitty game");
+  lcd.print("first game");
   delay(500);
   lcd.clear();
 
